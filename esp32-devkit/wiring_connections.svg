@@ -1,0 +1,95 @@
+<svg viewBox="0 0 860 660" width="860" height="660" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+  <title>ESP32 DevKit + DESPI-C02 + DHT22: connections</title>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <defs>
+    <g id="gnd" stroke="#222222" stroke-width="2" fill="none">
+      <line x1="0" y1="0" x2="0" y2="8"/>
+      <line x1="-10" y1="8" x2="10" y2="8"/>
+      <line x1="-6" y1="13" x2="6" y2="13"/>
+      <line x1="-2" y1="18" x2="2" y2="18"/>
+    </g>
+  </defs>
+  <path d="M200 110 H170 V30 H820 V580 H630" stroke="#d32f2f" stroke-width="3" fill="none"/>
+  <text x="480" y="22" fill="#d32f2f" font-weight="bold">3.3 V</text>
+  <rect x="200" y="60" width="170" height="540" rx="8" fill="#f7f7f7" stroke="#222222" stroke-width="2.5"/>
+  <rect x="255" y="48" width="60" height="24" rx="4" fill="#f7f7f7" stroke="#222222" stroke-width="2"/>
+  <text x="285" y="65" text-anchor="middle" fill="#777777" font-size="11">USB-C</text>
+  <text x="285" y="92" text-anchor="middle" fill="#1a73e8" font-size="11">to laptop (power + flash)</text>
+  <text x="285" y="265" text-anchor="middle" fill="#222222" font-weight="bold">ESP32 DevKit</text>
+  <text x="285" y="283" text-anchor="middle" fill="#777777" font-size="11">30-pin, USB-C</text>
+  <g font-size="12" font-weight="bold" fill="#222222">
+    <text x="208" y="114">3V3</text>
+    <text x="208" y="174">GND</text>
+  </g>
+  <circle cx="200" cy="110" r="3.5" fill="#222222"/>
+  <circle cx="200" cy="170" r="3.5" fill="#222222"/>
+  <path d="M200 170 H175" stroke="#222222" stroke-width="2" fill="none"/>
+  <use href="#gnd" x="175" y="170"/>
+  <g font-size="12" font-weight="bold" fill="#222222" text-anchor="end">
+    <text x="362" y="134">D4</text>
+    <text x="362" y="184">D17</text>
+    <text x="362" y="354">D14</text>
+    <text x="362" y="389">D21</text>
+    <text x="362" y="424">D22</text>
+    <text x="362" y="459">D13</text>
+    <text x="362" y="494">D18</text>
+    <text x="362" y="529">D23</text>
+  </g>
+  <rect x="470" y="100" width="130" height="160" rx="6" fill="#f7f7f7" stroke="#222222" stroke-width="2"/>
+  <text x="560" y="175" text-anchor="middle" fill="#222222" font-weight="bold">DHT22</text>
+  <g font-size="12" fill="#222222">
+    <text x="478" y="134">VCC</text>
+    <text x="478" y="184">DATA</text>
+    <text x="478" y="234">GND</text>
+  </g>
+  <line x1="370" y1="130" x2="470" y2="130" stroke="#9467bd" stroke-width="2.5"/>
+  <text x="400" y="122" text-anchor="middle" fill="#777777" font-size="10">power</text>
+  <line x1="370" y1="180" x2="470" y2="180" stroke="#ff7f0e" stroke-width="2.5"/>
+  <path d="M470 230 H445" stroke="#222222" stroke-width="2" fill="none"/>
+  <use href="#gnd" x="445" y="230"/>
+  <circle cx="430" cy="130" r="3.5" fill="#9467bd"/>
+  <circle cx="430" cy="180" r="3.5" fill="#ff7f0e"/>
+  <line x1="430" y1="130" x2="430" y2="142" stroke="#222222" stroke-width="2" stroke-dasharray="3 2"/>
+  <rect x="424" y="142" width="12" height="26" fill="#f7f7f7" stroke="#222222" stroke-width="2" stroke-dasharray="3 2"/>
+  <line x1="430" y1="168" x2="430" y2="180" stroke="#222222" stroke-width="2" stroke-dasharray="3 2"/>
+  <text x="440" y="160" fill="#777777" font-size="10">10 kΩ</text>
+  <text x="535" y="280" text-anchor="middle" fill="#777777" font-size="11">dashed 10 kΩ: only for a bare 4-pin sensor</text>
+  <g fill="#222222">
+    <circle cx="370" cy="130" r="3.5"/><circle cx="470" cy="130" r="3.5"/>
+    <circle cx="370" cy="180" r="3.5"/><circle cx="470" cy="180" r="3.5"/>
+    <circle cx="470" cy="230" r="3.5"/>
+  </g>
+  <rect x="470" y="320" width="160" height="280" rx="6" fill="#f7f7f7" stroke="#222222" stroke-width="2"/>
+  <text x="575" y="415" text-anchor="middle" fill="#222222" font-weight="bold">DESPI-C02</text>
+  <text x="575" y="432" text-anchor="middle" fill="#777777" font-size="11">e-paper adapter</text>
+  <text x="575" y="470" text-anchor="middle" fill="#1a73e8" font-size="11">RESE switch</text>
+  <text x="575" y="485" text-anchor="middle" fill="#1a73e8" font-size="11">→ 0.47</text>
+  <text x="575" y="520" text-anchor="middle" fill="#777777" font-size="10">display ribbon</text>
+  <text x="575" y="533" text-anchor="middle" fill="#777777" font-size="10">plugs in here</text>
+  <g font-size="12" fill="#222222">
+    <text x="478" y="354">BUSY</text><text x="478" y="389">RES</text>
+    <text x="478" y="424">D/C</text><text x="478" y="459">CS</text>
+    <text x="478" y="494">SCK</text><text x="478" y="529">SDI</text>
+    <text x="478" y="564">GND</text>
+    <text x="622" y="584" text-anchor="end">3.3V</text>
+  </g>
+  <line x1="370" y1="350" x2="470" y2="350" stroke="#1f77b4" stroke-width="2.5"/>
+  <line x1="370" y1="385" x2="470" y2="385" stroke="#2ca02c" stroke-width="2.5"/>
+  <line x1="370" y1="420" x2="470" y2="420" stroke="#9467bd" stroke-width="2.5"/>
+  <line x1="370" y1="455" x2="470" y2="455" stroke="#e377c2" stroke-width="2.5"/>
+  <line x1="370" y1="490" x2="470" y2="490" stroke="#ff7f0e" stroke-width="2.5"/>
+  <line x1="370" y1="525" x2="470" y2="525" stroke="#8c564b" stroke-width="2.5"/>
+  <path d="M470 560 H440" stroke="#222222" stroke-width="2" fill="none"/>
+  <use href="#gnd" x="440" y="560"/>
+  <g fill="#222222">
+    <circle cx="370" cy="350" r="3.5"/><circle cx="470" cy="350" r="3.5"/>
+    <circle cx="370" cy="385" r="3.5"/><circle cx="470" cy="385" r="3.5"/>
+    <circle cx="370" cy="420" r="3.5"/><circle cx="470" cy="420" r="3.5"/>
+    <circle cx="370" cy="455" r="3.5"/><circle cx="470" cy="455" r="3.5"/>
+    <circle cx="370" cy="490" r="3.5"/><circle cx="470" cy="490" r="3.5"/>
+    <circle cx="370" cy="525" r="3.5"/><circle cx="470" cy="525" r="3.5"/>
+    <circle cx="470" cy="560" r="3.5"/><circle cx="630" cy="580" r="3.5"/>
+  </g>
+  <use href="#gnd" x="30" y="620"/>
+  <text x="48" y="636" fill="#222222">= GND. Every ground symbol is wired together and to a GND pin.</text>
+</svg>

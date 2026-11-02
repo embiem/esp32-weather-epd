@@ -37,6 +37,9 @@
 #if defined(SENSOR_BME680)
   #include <Adafruit_BME680.h>
 #endif
+#if defined(SENSOR_DHT22)
+  #include <DHT.h>
+#endif
 #if defined(USE_HTTPS_WITH_CERT_VERIF) || defined(USE_HTTPS_WITH_CERT_VERIF)
   #include <WiFiClientSecure.h>
 #endif
@@ -289,16 +292,38 @@ void setup()
   }
   killWiFi(); // WiFi no longer needed
 
-  // GET INDOOR TEMPERATURE AND HUMIDITY, start BMEx80...
+  // GET INDOOR TEMPERATURE AND HUMIDITY, start sensor...
   pinMode(PIN_BME_PWR, OUTPUT);
   digitalWrite(PIN_BME_PWR, HIGH);
 #if defined(SENSOR_INIT_DELAY_MS) && SENSOR_INIT_DELAY_MS > 0
   delay(SENSOR_INIT_DELAY_MS);
 #endif
-  TwoWire I2C_bme = TwoWire(0);
-  I2C_bme.begin(PIN_BME_SDA, PIN_BME_SCL, 100000); // 100kHz
   float inTemp     = NAN;
   float inHumidity = NAN;
+#if defined(SENSOR_DHT22)
+  Serial.print(String(TXT_READING_FROM) + " DHT22... ");
+  DHT dht(PIN_DHT_DATA, DHT22);
+  dht.begin();
+  // The DHT22 returns no valid reading during its first ~2s after power-up.
+  delay(2000);
+  inTemp     = dht.readTemperature(); // Celsius
+  inHumidity = dht.readHumidity();    // %
+
+  // note: readings are checked again before drawing to screen. If a reading
+  //       is not a number (NAN) then an error occurred, a dash '-' will be
+  //       displayed.
+  if (std::isnan(inTemp) || std::isnan(inHumidity))
+  {
+    statusStr = "DHT22 " + String(TXT_READ_FAILED); // check wiring
+    Serial.println(statusStr);
+  }
+  else
+  {
+    Serial.println(TXT_SUCCESS);
+  }
+#else
+  TwoWire I2C_bme = TwoWire(0);
+  I2C_bme.begin(PIN_BME_SDA, PIN_BME_SCL, 100000); // 100kHz
 #if defined(SENSOR_BME280)
   Serial.print(String(TXT_READING_FROM) + " BME280... ");
   Adafruit_BME280 bme;
@@ -335,6 +360,7 @@ void setup()
     statusStr = "BME " + String(TXT_NOT_FOUND); // check wiring
     Serial.println(statusStr);
   }
+#endif
   digitalWrite(PIN_BME_PWR, LOW);
 
   String refreshTimeStr;
