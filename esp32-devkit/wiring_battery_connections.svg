@@ -1,0 +1,169 @@
+<svg viewBox="0 0 1200 820" width="1200" height="820" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="13">
+  <title>ESP32 DevKit + LiPo/TP4056/MCP1700 + DESPI-C02 + DHT22: connections</title>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <defs>
+    <g id="gnd" stroke="#222222" stroke-width="2" fill="none">
+      <line x1="0" y1="0" x2="0" y2="8"/>
+      <line x1="-10" y1="8" x2="10" y2="8"/>
+      <line x1="-6" y1="13" x2="6" y2="13"/>
+      <line x1="-2" y1="18" x2="2" y2="18"/>
+    </g>
+  </defs>
+  <path d="M535 105 V40 H1165 V620 H1140" stroke="#d32f2f" stroke-width="3" fill="none"/>
+  <text x="860" y="30" fill="#d32f2f" font-weight="bold">3.3 V</text>
+  <rect x="20" y="105" width="110" height="125" rx="6" fill="#f7f7f7" stroke="#222222" stroke-width="2"/>
+  <text x="75" y="160" text-anchor="middle" fill="#222222" font-weight="bold">LiPo</text>
+  <text x="75" y="178" text-anchor="middle" fill="#222222">3.7 V, 1 cell</text>
+  <line x1="130" y1="140" x2="180" y2="140" stroke="#e09b00" stroke-width="3"/>
+  <text x="155" y="132" text-anchor="middle" fill="#777777" font-size="11">red +</text>
+  <line x1="130" y1="200" x2="180" y2="200" stroke="#222222" stroke-width="3"/>
+  <text x="155" y="192" text-anchor="middle" fill="#777777" font-size="11">black −</text>
+  <rect x="180" y="95" width="130" height="150" rx="6" fill="#f7f7f7" stroke="#222222" stroke-width="2"/>
+  <text x="188" y="144" fill="#222222" font-size="12">B+</text><text x="188" y="204" fill="#222222" font-size="12">B−</text>
+  <text x="302" y="144" text-anchor="end" fill="#222222" font-size="12">OUT+</text><text x="302" y="204" text-anchor="end" fill="#222222" font-size="12">OUT−</text>
+  <text x="245" y="168" text-anchor="middle" fill="#222222" font-weight="bold">TP4056</text>
+  <text x="245" y="183" text-anchor="middle" fill="#777777" font-size="10">with protection</text>
+  <rect x="227" y="237" width="36" height="14" rx="2" fill="#f7f7f7" stroke="#222222" stroke-width="2"/>
+  <text x="245" y="270" text-anchor="middle" fill="#1a73e8" font-size="12">USB: charge here</text>
+  <circle cx="180" cy="140" r="3.5" fill="#222222"/>
+  <circle cx="180" cy="200" r="3.5" fill="#222222"/>
+  <circle cx="310" cy="140" r="3.5" fill="#222222"/>
+  <circle cx="310" cy="200" r="3.5" fill="#222222"/>
+  <path d="M310 200 H320 V210" stroke="#222222" stroke-width="2" fill="none"/>
+  <use href="#gnd" x="320" y="210"/>
+  <line x1="310" y1="140" x2="369" y2="140" stroke="#e09b00" stroke-width="3"/>
+  <circle cx="372" cy="140" r="3" fill="none" stroke="#222222" stroke-width="2"/>
+  <circle cx="402" cy="140" r="3" fill="none" stroke="#222222" stroke-width="2"/>
+  <line x1="374" y1="138" x2="400" y2="124" stroke="#222222" stroke-width="2.5"/>
+  <text x="387" y="100" text-anchor="middle" fill="#222222" font-size="11">SW1</text>
+  <text x="387" y="113" text-anchor="middle" fill="#777777" font-size="10">(optional)</text>
+  <line x1="405" y1="140" x2="470" y2="140" stroke="#e09b00" stroke-width="3"/>
+  <circle cx="345" cy="140" r="4" fill="#e09b00"/>
+  <line x1="432" y1="140" x2="432" y2="158" stroke="#e09b00" stroke-width="2"/>
+  <line x1="420" y1="158" x2="444" y2="158" stroke="#222222" stroke-width="3"/>
+  <line x1="420" y1="166" x2="444" y2="166" stroke="#222222" stroke-width="3"/>
+  <line x1="432" y1="166" x2="432" y2="176" stroke="#222222" stroke-width="2"/>
+  <use href="#gnd" x="432" y="176"/>
+  <circle cx="432" cy="140" r="4" fill="#e09b00"/>
+  <text x="432" y="212" text-anchor="middle" fill="#777777" font-size="11">C1 1 µF</text>
+  <rect x="470" y="105" width="90" height="90" rx="6" fill="#f7f7f7" stroke="#222222" stroke-width="2"/>
+  <text x="515" y="140" text-anchor="middle" fill="#222222" font-size="11" font-weight="bold">MCP1700</text>
+  <text x="515" y="154" text-anchor="middle" fill="#222222" font-size="11">-3302E</text>
+  <text x="515" y="170" text-anchor="middle" fill="#777777" font-size="10">3.3 V LDO</text>
+  <text x="466" y="132" text-anchor="end" fill="#777777" font-size="9">2 VIN</text>
+  <text x="541" y="100" fill="#777777" font-size="9">3 VOUT</text>
+  <text x="521" y="212" fill="#777777" font-size="9">1 GND</text>
+  <circle cx="470" cy="140" r="3.5" fill="#222222"/>
+  <circle cx="535" cy="105" r="3.5" fill="#222222"/>
+  <line x1="515" y1="195" x2="515" y2="215" stroke="#222222" stroke-width="2"/>
+  <circle cx="515" cy="195" r="3.5" fill="#222222"/>
+  <use href="#gnd" x="515" y="215"/>
+  <line x1="595" y1="40" x2="595" y2="58" stroke="#d32f2f" stroke-width="2"/>
+  <line x1="583" y1="58" x2="607" y2="58" stroke="#222222" stroke-width="3"/>
+  <line x1="583" y1="66" x2="607" y2="66" stroke="#222222" stroke-width="3"/>
+  <line x1="595" y1="66" x2="595" y2="76" stroke="#222222" stroke-width="2"/>
+  <use href="#gnd" x="595" y="76"/>
+  <circle cx="595" cy="40" r="4" fill="#d32f2f"/>
+  <text x="595" y="112" text-anchor="middle" fill="#777777" font-size="11">C2 1 µF</text>
+  <line x1="655" y1="40" x2="655" y2="58" stroke="#d32f2f" stroke-width="2"/>
+  <line x1="643" y1="58" x2="667" y2="58" stroke="#222222" stroke-width="3"/>
+  <line x1="643" y1="66" x2="667" y2="66" stroke="#222222" stroke-width="3"/>
+  <line x1="655" y1="66" x2="655" y2="76" stroke="#222222" stroke-width="2"/>
+  <use href="#gnd" x="655" y="76"/>
+  <circle cx="655" cy="40" r="4" fill="#d32f2f"/>
+  <text x="670" y="56" fill="#222222" font-size="12">+</text>
+  <text x="655" y="112" text-anchor="middle" fill="#777777" font-size="11">C3 100 µF</text>
+  <line x1="345" y1="140" x2="345" y2="290" stroke="#e09b00" stroke-width="2"/>
+  <rect x="337" y="290" width="16" height="60" fill="#f7f7f7" stroke="#222222" stroke-width="2"/><text x="331" y="324" text-anchor="end" fill="#222222" font-size="12">R1 1 MΩ</text>
+  <line x1="345" y1="350" x2="345" y2="450" stroke="#00897b" stroke-width="2"/>
+  <rect x="337" y="450" width="16" height="60" fill="#f7f7f7" stroke="#222222" stroke-width="2"/><text x="331" y="484" text-anchor="end" fill="#222222" font-size="12">R2 1 MΩ</text>
+  <line x1="345" y1="510" x2="345" y2="530" stroke="#222222" stroke-width="2"/>
+  <use href="#gnd" x="345" y="530"/>
+  <line x1="345" y1="400" x2="720" y2="400" stroke="#00897b" stroke-width="2.5"/>
+  <circle cx="345" cy="400" r="4" fill="#00897b"/>
+  <text x="600" y="392" text-anchor="middle" fill="#777777" font-size="11">battery sense (½ battery voltage)</text>
+  <line x1="480" y1="400" x2="480" y2="418" stroke="#00897b" stroke-width="2"/>
+  <line x1="468" y1="418" x2="492" y2="418" stroke="#222222" stroke-width="3"/>
+  <line x1="468" y1="426" x2="492" y2="426" stroke="#222222" stroke-width="3"/>
+  <line x1="480" y1="426" x2="480" y2="436" stroke="#222222" stroke-width="2"/>
+  <use href="#gnd" x="480" y="436"/>
+  <circle cx="480" cy="400" r="4" fill="#00897b"/>
+  <text x="480" y="472" text-anchor="middle" fill="#777777" font-size="11">C4 100 nF</text>
+  <rect x="720" y="100" width="170" height="600" rx="8" fill="#f7f7f7" stroke="#222222" stroke-width="2.5"/>
+  <text x="805" y="290" text-anchor="middle" fill="#222222" font-weight="bold">ESP32 DevKit</text>
+  <text x="805" y="308" text-anchor="middle" fill="#777777" font-size="11">30-pin, USB-C</text>
+  <text x="805" y="640" text-anchor="middle" fill="#777777" font-size="11">VIN: unconnected</text>
+  <text x="805" y="656" text-anchor="middle" fill="#777777" font-size="11">USB-C: flashing only,</text>
+  <text x="805" y="672" text-anchor="middle" fill="#777777" font-size="11">SW1 off first</text>
+  <path d="M695 40 V150 H720" stroke="#d32f2f" stroke-width="3" fill="none"/>
+  <circle cx="695" cy="40" r="4" fill="#d32f2f"/>
+  <path d="M720 210 H700 V220" stroke="#222222" stroke-width="2" fill="none"/>
+  <use href="#gnd" x="700" y="220"/>
+  <circle cx="720" cy="150" r="3.5" fill="#222222"/>
+  <circle cx="720" cy="210" r="3.5" fill="#222222"/>
+  <circle cx="720" cy="400" r="3.5" fill="#222222"/>
+  <g font-size="12" font-weight="bold" fill="#222222"><text x="728" y="154">3V3</text><text x="728" y="214">GND</text><text x="728" y="404">D35</text></g>
+  <g font-size="12" font-weight="bold" fill="#222222" text-anchor="end"><text x="882" y="164">D4</text><text x="882" y="214">D17</text><text x="882" y="384">D14</text><text x="882" y="419">D21</text><text x="882" y="454">D22</text><text x="882" y="489">D13</text><text x="882" y="524">D18</text><text x="882" y="559">D23</text></g>
+  <path d="M890 610 H870 V620" stroke="#222222" stroke-width="2" fill="none"/>
+  <text x="882" y="604" text-anchor="end" font-size="12" font-weight="bold" fill="#222222">GND</text>
+  <circle cx="890" cy="610" r="3.5" fill="#222222"/>
+  <use href="#gnd" x="870" y="620"/>
+  <rect x="1000" y="130" width="130" height="160" rx="6" fill="#f7f7f7" stroke="#222222" stroke-width="2"/>
+  <text x="1090" y="205" text-anchor="middle" fill="#222222" font-weight="bold">DHT22</text>
+  <g font-size="12" fill="#222222"><text x="1008" y="164">VCC</text><text x="1008" y="214">DATA</text><text x="1008" y="264">GND</text></g>
+  <line x1="890" y1="160" x2="1000" y2="160" stroke="#9467bd" stroke-width="2.5"/>
+  <text x="925" y="152" text-anchor="middle" fill="#777777" font-size="10">power</text>
+  <line x1="890" y1="210" x2="1000" y2="210" stroke="#ff7f0e" stroke-width="2.5"/>
+  <path d="M1000 260 H975 V270" stroke="#222222" stroke-width="2" fill="none"/>
+  <use href="#gnd" x="975" y="270"/>
+  <circle cx="955" cy="160" r="3.5" fill="#9467bd"/>
+  <circle cx="955" cy="210" r="3.5" fill="#ff7f0e"/>
+  <line x1="955" y1="160" x2="955" y2="172" stroke="#222222" stroke-width="2" stroke-dasharray="3 2"/>
+  <rect x="949" y="172" width="12" height="26" fill="#f7f7f7" stroke="#222222" stroke-width="2" stroke-dasharray="3 2"/>
+  <line x1="955" y1="198" x2="955" y2="210" stroke="#222222" stroke-width="2" stroke-dasharray="3 2"/>
+  <text x="935" y="190" text-anchor="end" fill="#777777" font-size="10">10 kΩ</text>
+  <text x="1065" y="310" text-anchor="middle" fill="#777777" font-size="11">dashed 10 kΩ: bare 4-pin sensor only</text>
+  <circle cx="890" cy="160" r="3.5" fill="#222222"/>
+  <circle cx="1000" cy="160" r="3.5" fill="#222222"/>
+  <circle cx="890" cy="210" r="3.5" fill="#222222"/>
+  <circle cx="1000" cy="210" r="3.5" fill="#222222"/>
+  <circle cx="1000" cy="260" r="3.5" fill="#222222"/>
+  <rect x="1000" y="350" width="140" height="290" rx="6" fill="#f7f7f7" stroke="#222222" stroke-width="2"/>
+  <text x="1085" y="440" text-anchor="middle" fill="#222222" font-weight="bold">DESPI-C02</text>
+  <text x="1085" y="457" text-anchor="middle" fill="#777777" font-size="11">e-paper adapter</text>
+  <text x="1085" y="490" text-anchor="middle" fill="#1a73e8" font-size="11">RESE switch → 0.47</text>
+  <text x="1085" y="525" text-anchor="middle" fill="#777777" font-size="10">display ribbon</text>
+  <text x="1085" y="538" text-anchor="middle" fill="#777777" font-size="10">plugs in here</text>
+  <g font-size="12" fill="#222222"><text x="1008" y="384">BUSY</text><text x="1008" y="419">RES</text><text x="1008" y="454">D/C</text><text x="1008" y="489">CS</text><text x="1008" y="524">SCK</text><text x="1008" y="559">SDI</text><text x="1008" y="594">GND</text><text x="1132" y="624" text-anchor="end">3.3V</text></g>
+  <line x1="890" y1="380" x2="1000" y2="380" stroke="#1f77b4" stroke-width="2.5"/>
+  <circle cx="890" cy="380" r="3.5" fill="#222222"/>
+  <circle cx="1000" cy="380" r="3.5" fill="#222222"/>
+  <line x1="890" y1="415" x2="1000" y2="415" stroke="#2ca02c" stroke-width="2.5"/>
+  <circle cx="890" cy="415" r="3.5" fill="#222222"/>
+  <circle cx="1000" cy="415" r="3.5" fill="#222222"/>
+  <line x1="890" y1="450" x2="1000" y2="450" stroke="#9467bd" stroke-width="2.5"/>
+  <circle cx="890" cy="450" r="3.5" fill="#222222"/>
+  <circle cx="1000" cy="450" r="3.5" fill="#222222"/>
+  <line x1="890" y1="485" x2="1000" y2="485" stroke="#e377c2" stroke-width="2.5"/>
+  <circle cx="890" cy="485" r="3.5" fill="#222222"/>
+  <circle cx="1000" cy="485" r="3.5" fill="#222222"/>
+  <line x1="890" y1="520" x2="1000" y2="520" stroke="#ff7f0e" stroke-width="2.5"/>
+  <circle cx="890" cy="520" r="3.5" fill="#222222"/>
+  <circle cx="1000" cy="520" r="3.5" fill="#222222"/>
+  <line x1="890" y1="555" x2="1000" y2="555" stroke="#8c564b" stroke-width="2.5"/>
+  <circle cx="890" cy="555" r="3.5" fill="#222222"/>
+  <circle cx="1000" cy="555" r="3.5" fill="#222222"/>
+  <path d="M1000 590 H975 V600" stroke="#222222" stroke-width="2" fill="none"/>
+  <use href="#gnd" x="975" y="600"/>
+  <circle cx="1000" cy="590" r="3.5" fill="#222222"/>
+  <circle cx="1140" cy="620" r="3.5" fill="#222222"/>
+  <use href="#gnd" x="40" y="730"/>
+  <text x="58" y="746" fill="#222222">= GND. All ground symbols are wired together: TP4056 OUT−, MCP1700 pin 1, R2, C1–C4, ESP32 GND, DHT22, DESPI.</text>
+  <line x1="30" y1="775" x2="60" y2="775" stroke="#e09b00" stroke-width="3"/>
+  <text x="68" y="779" fill="#222222">battery voltage 3.0–4.2 V</text>
+  <line x1="260" y1="775" x2="290" y2="775" stroke="#d32f2f" stroke-width="3"/>
+  <text x="298" y="779" fill="#222222">3.3 V</text>
+  <line x1="360" y1="775" x2="390" y2="775" stroke="#00897b" stroke-width="3"/>
+  <text x="398" y="779" fill="#222222">battery sense, max 2.1 V</text>
+  <text x="30" y="805" fill="#d32f2f" font-size="12">Never use TP4056 B− as ground, never connect the battery to VIN or straight to 3V3.</text>
+</svg>
