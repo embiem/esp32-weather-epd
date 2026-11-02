@@ -20,7 +20,7 @@
 #if __has_include("secrets.h")
 #include "secrets.h"
 #else
-#error "Missing include/secrets.h. Copy include/secrets.h.example to include/secrets.h and set OWM_APIKEY_SECRET."
+#error "Missing include/secrets.h. Copy include/secrets.h.example to include/secrets.h and fill in the values."
 #endif
 
 // PINS
@@ -52,8 +52,10 @@ const uint8_t BME_ADDRESS = 0x76; // 0x76 if SDO -> GND; 0x77 if SDO -> VCC
 const uint8_t PIN_DHT_DATA = 17;
 
 // WIFI
-const char *WIFI_SSID     = "ssid";
-const char *WIFI_PASSWORD = "password";
+// Set WIFI_SSID_SECRET and WIFI_PASSWORD_SECRET in include/secrets.h
+// (gitignored).
+const char *WIFI_SSID     = WIFI_SSID_SECRET;
+const char *WIFI_PASSWORD = WIFI_PASSWORD_SECRET;
 const unsigned long WIFI_TIMEOUT = 10000; // ms, WiFi connection timeout.
 
 // HTTP

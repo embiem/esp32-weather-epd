@@ -259,11 +259,13 @@ done
 - `PIN_BAT_ADC = 35` (D35). The FireBeetle 2 ESP32-E uses `A2`.
 - New `PIN_DHT_DATA = 17` (D17). `PIN_BME_PWR` (D4) powers whichever sensor is
   selected.
-- Wi-Fi credentials and location are set locally.
-- `OWM_APIKEY` comes from `OWM_APIKEY_SECRET` in `platformio/include/secrets.h`,
-  which is gitignored. To set it up on a fresh checkout, copy
-  `platformio/include/secrets.h.example` to `platformio/include/secrets.h` and
-  enter the key. Without the file the build stops with an error naming it.
+- Location (`LAT`, `LON`, `CITY_STRING`) is set to Paderborn.
+- `WIFI_SSID`, `WIFI_PASSWORD` and `OWM_APIKEY` come from `WIFI_SSID_SECRET`,
+  `WIFI_PASSWORD_SECRET` and `OWM_APIKEY_SECRET` in
+  `platformio/include/secrets.h`, which is gitignored. To set it up on a fresh
+  checkout, copy `platformio/include/secrets.h.example` to
+  `platformio/include/secrets.h` and fill in the values. Without the file the
+  build stops with an error naming it.
 - `TIMEZONE = "CET-1CEST,M3.5.0,M10.5.0/3"` (Europe/Berlin, including
   daylight saving time).
 - `DATE_FORMAT = "%a, %e. %B"`: the top-right date reads e.g. "Mo, 2. November".
